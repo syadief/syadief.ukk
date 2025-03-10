@@ -7,7 +7,7 @@
                     Dashboard
                 </h1>
                 <p class="text-emerald-100 mt-2">
-                    Selamat datang kembali, {{ auth::user()->name }}
+                    Selamat datang, {{ auth::user()->name }} !
                 </p>
             </div>
         @endif
@@ -36,10 +36,12 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{{ $t->sepeda->merk }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{{ date('d/m/Y', strtotime($t->tanggalSewa)) }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 py-1 text-xs rounded-full
-                                    {{ $t->status == 'LUNAS' ? 'bg-emerald-100 text-emerald-800' : 'bg-yellow-100 text-yellow-800' }}">
-                                    {{ $t->status }}
+                                <span class="px-2 py-1 text-xs rounded-full 
+                                {{ $t->status == 'LUNAS' ? 'bg-emerald-100 text-emerald-800' : 
+                                    ($t->status == 'PROSES' ? 'bg-orange-100 text-orange-800' : 'bg-red-100 text-red-800') }}">
+                                        {{ $t->status }}
                                 </span>
+
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
                                 Rp {{ number_format($t->totalBiaya, 0, ',', '.') }}

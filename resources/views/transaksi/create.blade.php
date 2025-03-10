@@ -36,6 +36,12 @@
                     <label for="totalBiaya" class="block">TOTAL BIAYA</label>
                     <input type="input" class="border rounded p-2 w-full" name="totalBiaya">
 
+                    <label for="denda" class="block">DENDA</label>
+                    <input type="input" class="border rounded p-2 w-full" name="denda">
+
+                    <label for="jaminan" class="block">JAMINAN</label>
+                    <input type="text" class="border rounded p-2 w-full" name="jaminan">
+
                     <label for="status" class="block">STATUS</label>
                     <select name="status" id="status" class="border rounded p-2 w-full">
                         <option value="LUNAS">LUNAS</option>

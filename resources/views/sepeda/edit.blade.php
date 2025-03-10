@@ -12,26 +12,17 @@
                 @csrf
                 @method('PUT')
                 <div class="space-y-2">
-                    <label for="merk" class="block">MERK</label>
+                    <label for="merk" class="block">Merk</label>
                     <input type="text" class="border rounded p-2 w-full" name="merk" value="{{ ($sepeda->merk) }}">
 
-                    <label for="foto" class="block">FOTO</label>
-                    <input type="file" class="border rounded p-2 w-full" name="foto" value="{{ ($sepeda->foto) }}">
-
-                    <label for="tipe" class="block">TIPE</label>
-                    <input type="text" class="border rounded p-2 w-full" name="tipe" value="{{ ($sepeda->tipe) }}">
-
-                    <label for="warna" class="block">WARNA</label>
-                    <input type="text" class="border rounded p-2 w-full" name="warna" value="{{ ($sepeda->warna) }}">
-
-                    <label for="sewa">SEWA</label>
+                    <label for="sewa">Sewa</label>
                     <input type="text" name="sewa" class="border rounded p-2 w-full" value="{{ ($sepeda->sewa) }}">
 
-                    <label for="status">STATUS</label>
-                    <select name="status" id="" class="border rounded p-2 w-full">
-                        <option value="TERSEDIA" {{ $sepeda->status == 'TERSEDIA' ? 'selected' : '' }}>TERSEDIA</option>
-                        <option value="DISEWA" {{ $sepeda->status == 'DISEWA' ? 'selected' : '' }}>DISEWA</option>
-                    </select>
+                    <label for="jumlah">Jumlah</label>
+                    <input type="text" name="jumlah" class="border rounded p-2 w-full" value="{{ ($sepeda->jumlah) }}">
+
+                    <label for="foto" class="block">Foto</label>
+                    <input type="file" class="border rounded p-2 w-full" name="foto" value="{{ ($sepeda->foto) }}">
 
                     <button class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded w-full">
                         SIMPAN
@@ -40,4 +31,4 @@
             </form>
         </div>
     </div>
-@endsection
+@endsection         

@@ -41,6 +41,12 @@
                     <label for="totalBiaya" class="block">TOTAL BIAYA</label>
                     <input type="input" class="border rounded p-2 w-full" name="totalBiaya" value="{{ $transaksi->totalBiaya }}">
 
+                    <label for="denda" class="block">DENDA</label>
+                    <input type="input" class="border rounded p-2 w-full" name="denda" value="{{ $transaksi->denda }}">
+
+                    <label for="jaminan" class="block">JAMINAN</label>
+                    <input type="text" class="border rounded p-2 w-full" name="jaminan" value="{{ $transaksi->jaminan }}">
+
                     <label for="status" class="block">STATUS</label>
                     <select name="status" id="status" class="border rounded p-2 w-full">
                         <option value="{{ $transaksi->status }}">{{ $transaksi->status }}</option>

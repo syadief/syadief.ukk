@@ -31,10 +31,9 @@ class SepedaController extends Controller
     {
         $request->validate([
             'merk' => 'required',
-            'tipe' => 'required',
-            'warna' => 'required',
             'sewa' => 'required',
-            'status' => 'required'
+            'jumlah' => 'required',
+            'foto' => 'required'
         ]);
 
         $imageName = time().'.'.$request->foto->extension();
@@ -42,11 +41,9 @@ class SepedaController extends Controller
 
         Sepeda::create([
             'merk' => $request->merk, 
-            'foto' => 'images/'.$imageName, 
-            'tipe' => $request->tipe, 
-            'warna' => $request->warna, 
             'sewa' => $request->sewa, 
-            'status' => $request->status,
+            'jumlah' => $request->jumlah, 
+            'foto' => 'images/'.$imageName, 
         ]);
         return redirect()->route('sepeda.index');
     }
@@ -75,10 +72,8 @@ class SepedaController extends Controller
     {
         $request->validate([
             'merk' => 'required',
-            'tipe' => 'required',
-            'warna' => 'required',
             'sewa' => 'required',
-            'status' => 'required',
+            'jumlah' => 'required',
         ]);
     
         $sepeda = Sepeda::findOrFail($id);
@@ -98,11 +93,9 @@ class SepedaController extends Controller
         }
     
         $sepeda->update([
-            'merk' => $request->merk,
-            'tipe' => $request->tipe,
-            'warna' => $request->warna,
-            'sewa' => $request->sewa,
-            'status' => $request->status,
+            'merk' => $request->merk, 
+            'sewa' => $request->sewa, 
+            'jumlah' => $request->jumlah, 
         ]);
     
         return redirect()->route('sepeda.index');

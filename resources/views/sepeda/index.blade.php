@@ -19,11 +19,9 @@
                 <tr class="bg-emerald-800 text-white">
                     <th class="border border-gray-300 px-4 py-2">No</th>
                     <th class="border border-gray-300 px-4 py-2">Merk</th>
-                    <th class="border border-gray-300 px-4 py-2">Foto</th>
-                    <th class="border border-gray-300 px-4 py-2">Tipe</th>
-                    <th class="border border-gray-300 px-4 py-2">Warna</th>
                     <th class="border border-gray-300 px-4 py-2">Sewa</th>
-                    <th class="border border-gray-300 px-4 py-2">Status</th>
+                    <th class="border border-gray-300 px-4 py-2">Jumlah</th>
+                    <th class="border border-gray-300 px-4 py-2">Foto</th>
                     <th class="border border-gray-300 px-4 py-2">Action</th>
                 </tr>
             </thead>
@@ -33,14 +31,12 @@
                     <tr>
                         <td class="border border-gray-300 px-4 py-2 text-center">{{ $index + 1 }}</td>
                         <td class="border border-gray-300 px-4 py-2">{{ $sepeda->merk }}</td>
+                        <td class="border border-gray-300 px-4 py-2">Rp {{ number_format($sepeda->sewa, 0, ',', '.') }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $sepeda->jumlah }}</td>
                         <td class="border border-gray-300 px-4 py-2 text-center">
                             <img src="{{ asset($sepeda->foto) }}" class="h-24 w-24 object-contain mx-auto"
                                 alt="{{ $sepeda->merk }}">
                         </td>
-                        <td class="border border-gray-300 px-4 py-2">{{ $sepeda->tipe }}</td>
-                        <td class="border border-gray-300 px-4 py-2">{{ $sepeda->warna }}</td>
-                        <td class="border border-gray-300 px-4 py-2">Rp {{ number_format($sepeda->sewa, 0, ',', '.') }}</td>
-                        <td class="border border-gray-300 px-4 py-2">{{ $sepeda->status }}</td>
                         <td class="border border-gray-300 px-4 py-2">
                             <div class="flex justify-center gap-2">
                                 <a href="{{ route('sepeda.edit', $sepeda->idSepeda) }}"

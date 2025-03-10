@@ -8,7 +8,8 @@
         </div>
 
         <div class="mb-4">
-            <a href="{{ route('transaksi.create') }}" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded">
+            <a href="{{ route('transaksi.create') }}"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded">
                 Tambah Transaksi
             </a>
         </div>
@@ -23,6 +24,8 @@
                         <th class="border border-gray-300 px-4 py-2">Tanggal Sewa</th>
                         <th class="border border-gray-300 px-4 py-2">Tanggal Kembali</th>
                         <th class="border border-gray-300 px-4 py-2">Total Pembayaran</th>
+                        <th class="border border-gray-300 px-4 py-2 w-32">Denda</th>
+                        <th class="border border-gray-300 px-4 py-2">Jaminan</th>
                         <th class="border border-gray-300 px-4 py-2">Status</th>
                         <th class="border border-gray-300 px-4 py-2">Action</th>
                     </tr>
@@ -36,12 +39,16 @@
                             <td class="border border-gray-300 px-4 py-2">{{ $transaksi->sepeda->merk }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $transaksi->tanggalSewa }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $transaksi->tanggalKembali }}</td>
-                            <td class="border border-gray-300 px-4 py-2">Rp {{ number_format($transaksi->totalBiaya, 0, ',', '.') }}</td>
+                            <td class="border border-gray-300 px-4 py-2">Rp
+                                {{ number_format($transaksi->totalBiaya, 0, ',', '.') }}</td>
+                            <td class="border border-gray-300 px-4 py-2 w-32">Rp
+                                {{ number_format($transaksi->denda, 0, ',', '.') }}</td>
+                            <td class="border border-gray-300 px-4 py-2">{{ $transaksi->jaminan }}</td>
                             <td class="border border-gray-300 px-4 py-2">{{ $transaksi->status }}</td>
                             <td class="border border-gray-300 px-4 py-2">
                                 <div class="flex justify-center gap-2">
-                                    <a href="{{ route('transaksi.edit', $transaksi->idRental) }}" 
-                                       class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-1 rounded">
+                                    <a href="{{ route('transaksi.edit', $transaksi->idRental) }}"
+                                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-1 rounded">
                                         Edit
                                     </a>
                                     <form action="{{ route('transaksi.destroy', $transaksi->idRental) }}" method="POST">
