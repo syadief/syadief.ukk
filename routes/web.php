@@ -27,13 +27,12 @@ Route::middleware('auth')->group(function () {
 
         Route::get('dashboard', [BerandaController::class, 'index'])->name('dashboard');
         
-        Route::resource('pelanggan', PelangganController::class);
-        /* Route::get('/pelanggan', [PelangganController::class, 'index'])->name('pelanggan.index');
+        Route::get('/pelanggan', [PelangganController::class, 'index'])->name('pelanggan.index');
         Route::get('/pelanggan/create', [PelangganController::class, 'create'])->name('pelanggan.create');
         Route::post('/pelanggan/store', [PelangganController::class, 'store'])->name('pelanggan.store');
         Route::get('/pelanggan/{id}/edit', [PelangganController::class, 'edit'])->name('pelanggan.edit');
         Route::put('/pelanggan/{id}', [PelangganController::class, 'update'])->name('pelanggan.update');
-        Route::delete('/pelanggan/{id}', [PelangganController::class, 'destroy'])->name('pelanggan.destroy'); */
+        Route::delete('/pelanggan/{id}', [PelangganController::class, 'destroy'])->name('pelanggan.destroy'); 
         
         Route::get('/sepeda', [SepedaController::class, 'index'])->name('sepeda.index');
         Route::get('/sepeda/create', [SepedaController::class, 'create'])->name('sepeda.create');

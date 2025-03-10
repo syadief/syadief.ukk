@@ -40,7 +40,7 @@
         </div>
     </nav>
 
-    {{-- home --}}
+    <!-- Home -->
     <section id="home" class="relative h-screen">
         <div class="absolute inset-0" style="background-image: url('{{ asset('images/bg.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;"></div>
         <div class="relative flex items-center justify-center h-full px-4">
@@ -56,7 +56,7 @@
         </div>
     </section>
 
-    {{-- about --}}
+    <!-- Tentang -->
     <section id="about" class="py-24 bg-gradient-to-b from-emerald-50 to-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-emerald-800 mb-8">MENGAPA MEMILIH KAMI?</h2>
@@ -106,7 +106,7 @@
         </div>
     </section>
 
-    {{-- sepeda --}}
+    <!-- Sepeda -->
     <section id="sepeda" class="bg-gradient-to-b from-emerald-50 to-white py-20">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-emerald-800 mb-12">KOLEKSI SEPEDA</h2>
@@ -127,7 +127,7 @@
         </div>
     </section>
 
-    {{-- contact --}}
+    <!-- Kontak -->     
     <section id="contact" class="py-24 bg-gradient-to-br from-emerald-800 to-teal-700">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-white mb-12">KONTAK</h2>
@@ -170,7 +170,7 @@
         </div>
     </section>
 
-    {{-- footer --}}
+    <!-- Footer -->
     <footer class="bg-gradient-to-r from-emerald-900 to-teal-900 text-white py-10">
         <div class="container mx-auto px-4">
             <div class="flex flex-col items-center space-y-4">

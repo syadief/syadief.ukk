@@ -78,7 +78,7 @@ class PelangganController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'alamat' => 'required|string',
-            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Foto boleh kosong
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
         ]);
 
         $pelanggan = Pelanggan::findOrFail($id);
@@ -87,7 +87,7 @@ class PelangganController extends Controller
 
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $filename = time() . '_' . $file->getClientOriginalName(); // Nama unik agar tidak menimpa file lain
+            $filename = time() . '_' . $file->getClientOriginalName(); 
 
             $file->move(public_path('images'), $filename);
 
