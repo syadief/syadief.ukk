@@ -12,7 +12,7 @@
                 @csrf
                 @method('PUT')
                 <div class="space-y-2">
-                    <label for="nama" class="block">NAMA PELANGGAN</label>
+                    <label for="nama" class="block">Nama Pelanggan</label>
                     <select name="idCustomer" id="idCustomer" class="border rounded p-2 w-full">
                         <option value="idCustomer">NAMA PELANGGAN</option>
                         @foreach ($pelanggan as $item)
@@ -22,7 +22,7 @@
                         @endforeach
                     </select>
                     
-                    <label for="merk" class="block">MERK SEPEDA:</label>
+                    <label for="merk" class="block">Merk Sepeda</label>
                     <select name="idSepeda" id="idSepeda" class="border rounded p-2 w-full">
                         <option value="idSepeda">MERK SEPEDA</option>
                         @foreach ($sepeda as $item)
@@ -32,22 +32,22 @@
                         @endforeach
                     </select>
 
-                    <label for="tanggalSewa" class="block">TANGGAL SEWA</label>
+                    <label for="tanggalSewa" class="block">Tanggal Sewa</label>
                     <input type="date" class="border rounded p-2 w-full" name="tanggalSewa" value="{{ $transaksi->tanggalSewa }}">
 
-                    <label for="tanggalKembali" class="block">TANGGAL KEMBALI</label>
+                    <label for="tanggalKembali" class="block">Tanggal Kembali</label>
                     <input type="date" class="border rounded p-2 w-full" name="tanggalKembali" value="{{ $transaksi->tanggalKembali }}">
 
-                    <label for="totalBiaya" class="block">TOTAL BIAYA</label>
+                    <label for="totalBiaya" class="block">Bayar</label>
                     <input type="input" class="border rounded p-2 w-full" name="totalBiaya" value="{{ $transaksi->totalBiaya }}">
 
-                    <label for="denda" class="block">DENDA</label>
+                    <label for="denda" class="block">Denda</label>
                     <input type="input" class="border rounded p-2 w-full" name="denda" value="{{ $transaksi->denda }}">
 
-                    <label for="jaminan" class="block">JAMINAN</label>
+                    <label for="jaminan" class="block">jaminan</label>
                     <input type="text" class="border rounded p-2 w-full" name="jaminan" value="{{ $transaksi->jaminan }}">
 
-                    <label for="status" class="block">STATUS</label>
+                    <label for="status" class="block">Status</label>
                     <select name="status" id="status" class="border rounded p-2 w-full">
                         <option value="{{ $transaksi->status }}">{{ $transaksi->status }}</option>
                         <option value="LUNAS">LUNAS</option>

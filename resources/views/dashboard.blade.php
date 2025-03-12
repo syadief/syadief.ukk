@@ -25,6 +25,8 @@
                             <th class="px-6 py-3 text-left text-sm font-semibold">Pelanggan</th>
                             <th class="px-6 py-3 text-left text-sm font-semibold">Sepeda</th>
                             <th class="px-6 py-3 text-left text-sm font-semibold">Tanggal Sewa</th>
+                            <th class="px-6 py-3 text-left text-sm font-semibold">Tanggal Kembali</th>
+                            <th class="px-6 py-3 text-left text-sm font-semibold">Denda</th>
                             <th class="px-6 py-3 text-left text-sm font-semibold">Status</th>
                             <th class="px-6 py-3 text-left text-sm font-semibold">Total</th>
                         </tr>
@@ -35,6 +37,10 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{{ $t->pelanggan->nama }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{{ $t->sepeda->merk }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{{ date('d/m/Y', strtotime($t->tanggalSewa)) }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{{ date('d/m/Y', strtotime($t->tanggalKembali)) }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                Rp {{ number_format($t->denda, 0, ',', '.') }}
+                            </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span class="px-2 py-1 text-xs rounded-full 
                                 {{ $t->status == 'LUNAS' ? 'bg-emerald-100 text-emerald-800' : 

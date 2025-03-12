@@ -11,7 +11,7 @@
             <form action="{{ route('transaksi.store') }}" method="POST">
                 @csrf
                 <div class="space-y-2">
-                    <label for="nama" class="block">NAMA PELANGGAN</label>
+                    <label for="nama" class="block">Nama Pelanggan</label>
                     <select name="idCustomer" id="idCustomer" class="border rounded p-2 w-full">
                         <option value="idCustomer">Nama Pelanggan</option>
                         @foreach ($pelanggan as $item)
@@ -19,7 +19,7 @@
                         @endforeach
                     </select>
                     
-                    <label for="merk" class="block">MERK SEPEDA</label>
+                    <label for="merk" class="block">Merk Sepeda</label>
                     <select name="idSepeda" id="idSepeda" class="border rounded p-2 w-full">
                         <option value="idSepeda">Merk Sepeda</option>
                         @foreach ($sepeda as $item)
@@ -27,22 +27,22 @@
                         @endforeach
                     </select>
 
-                    <label for="tanggalSewa" class="block">TANGGAL SEWA</label>
+                    <label for="tanggalSewa" class="block">Tanggal Sewa</label>
                     <input type="date" class="border rounded p-2 w-full" name="tanggalSewa">
 
-                    <label for="tanggalKembali" class="block">TANGGAL KEMBALI</label>
+                    <label for="tanggalKembali" class="block">Tanggal Kembali</label>
                     <input type="date" class="border rounded p-2 w-full" name="tanggalKembali">
 
-                    <label for="totalBiaya" class="block">TOTAL BIAYA</label>
+                    <label for="totalBiaya" class="block">Bayar</label>
                     <input type="input" class="border rounded p-2 w-full" name="totalBiaya">
 
-                    <label for="denda" class="block">DENDA</label>
+                    <label for="denda" class="block">Denda</label>
                     <input type="input" class="border rounded p-2 w-full" name="denda">
 
-                    <label for="jaminan" class="block">JAMINAN</label>
+                    <label for="jaminan" class="block">Jaminan</label>
                     <input type="text" class="border rounded p-2 w-full" name="jaminan">
 
-                    <label for="status" class="block">STATUS</label>
+                    <label for="status" class="block">Status</label>
                     <select name="status" id="status" class="border rounded p-2 w-full">
                         <option value="LUNAS">LUNAS</option>
                         <option value="PROSES">PROSES</option>
